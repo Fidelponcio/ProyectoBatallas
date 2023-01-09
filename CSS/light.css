@@ -1,0 +1,255 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/*
+    -- CSS LIGHT THEME --
+*/
+
+:root {
+    --background: linear-gradient(to right top, #0051ff, #0077ff, #14b3b6, #13dbdf);
+    --dark-contrast: rgba(255, 255, 255, 0.5);
+    --light-contrast: rgba(0, 0, 0, 0.1);
+    --color: white;
+    --text-shadow: 3px 3px 10px rgb(0, 0, 0);
+    --background-border: #5900ff91;
+    --background-button: #5900ff91;
+    --box-shadow-button: 0 0 10px #5900ff91;
+    --input-focus: #5900ff91;
+    --error-warning: #af4242;
+    --background-error: #fde8ec;
+    --warning: red;
+    --background-header: rgba(0, 0, 0, 0.247);
+}
+
+/*
+    -- @KEYFRAMES --
+*/
+
+@keyframes indexBorder {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/*
+    -- CSS RESETS --
+*/
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/*
+    -- CSS GENERAL --
+*/
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    color: var(--color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    /* background: var(--background-header); */
+    width: 100%;
+    height: 4rem;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: right;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-shadow: var(--text-shadow);
+    font-size: 40px;
+}
+
+p {
+    margin: 20px auto 20px auto;
+    font-size: 20px;
+    text-shadow: var(--text-shadow);
+}
+
+.nonClickable {
+    pointer-events: none;
+    user-select: none;
+}
+
+.btn {
+    color: var(--color);
+    border: none;
+    cursor: pointer;
+	margin: 0 auto 10px auto;
+    padding: 10px 0 10px;
+	border-radius: 20px;
+	background: var(--background-button);
+    box-shadow: var(--box-shadow-button);
+    transition: ease 0.2s;
+}
+
+.selectors {
+    height: 100%;
+    width: 8rem;
+}
+
+/*
+    -- CSS DROPDOWN LANG --
+*/
+
+.dropdown {
+    position: relative;
+    background: var(--dark-contrast);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.dropdown > button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.dropdown > button:hover {
+    background: var(--dark-contrast);
+}
+
+.dropdown > ul {
+    background: var(--dark-contrast);
+    position: absolute;
+    margin-top: 5px;
+    margin-left: -15px;
+    width: 130px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all .4s ease;
+}
+
+.dropdown > ul > li {
+    width: 100%;
+    height: 100%;
+}
+
+.dropdown > ul > li:hover {
+    background: var(--dark-contrast);
+}
+
+.dropdown > ul > li > a {
+    color: var(--color);
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    line-height: 2rem;
+    margin-left: .5rem;
+}
+
+.dropdown > button:focus + ul {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.flag {
+    background-size: cover;
+    background-position: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+.en {background-image: url("../tabs/img/flags/en.jpg");}
+
+.es {background-image: url("../tabs/img/flags/es.png");}
+
+/*
+    -- CSS SELECTOR TEMA --
+*/
+
+.theme-form {
+    position: relative;
+    background: var(--dark-contrast);
+    width: 4rem;
+    height: 2rem;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.theme-form > button {
+    border: none;
+    border-radius: 100%;
+    width: 1.75rem;
+    height: 1.75rem;
+    cursor: pointer;
+}
+
+.theme-form > .light {
+    background: var(--background);
+    color: var(--color);
+}
+
+.theme-form > .dark {
+    background: none;
+}
+
+.theme-form > .dark:hover {
+    background: none;
+    background: var(--light-contrast);
+}
+
+/*
+    -- CSS MOSTRAR ERRORES --
+*/
+
+.alert {
+    color: var(--warning);
+    font-size: 25px;
+    padding: 5px;
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+}
+
+.alert:hover > .error {
+    display: block;
+}

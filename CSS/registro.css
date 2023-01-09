@@ -1,0 +1,111 @@
+.containerForm {
+    width: 100%;
+    margin: 20px 5px;
+}
+
+label {
+    display: block;
+    width: 90%;
+    text-align: left;
+    margin: 15px auto 5px;
+}
+
+input {
+	padding: 10px;
+	width: 90%;
+	border: 2px solid #f0f0f0;
+	font-size: 16px;
+	outline: none;
+}
+
+input:focus {
+    border-color: var(--input-focus);
+}
+
+.error {
+	color: var(--error-warning);
+	background-color: var(--background-error);
+	padding: 5px;
+	display: none;
+    text-align: left;
+	transform: translateY(-30px);
+	font-size: 10px;
+    margin: 0;
+    z-index: 100;
+    position: absolute;
+    left: 10px;
+}
+
+.border-animation {
+    position: relative;
+    height: 35rem;
+    width: 40rem;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.border-animation::after {
+    content: '';
+    position: absolute;
+    height: 200%;
+    width: 10rem;
+    top: -50%;
+    left: 30%;
+    background: var(--background-border);
+    animation: indexBorder 4s linear infinite;
+    overflow: hidden;
+    animation-delay: -2s;
+    z-index: 0;
+}
+
+.border-animation > .registroContainer {
+    position: absolute;
+    width: 39.5rem;
+    height: 34.5rem;
+    text-align: center;
+    padding-top: 1rem;
+    background-image: var(--background);
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 1;
+    margin: .25rem;
+}
+
+.campos {
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 2fr 50%;
+    justify-content: center;
+}
+
+.campo {
+    display: inline-block;
+    width: 95%;
+}
+
+.post {display: none;}
+
+.post-button {width: 30%;}
+
+.post-button:hover {width: 40%;}
+
+.post > img {
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--color);
+}
+
+.botones {
+    display: inline-flex;
+    width: 30%;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+
+.registroButton {
+    display:inline-block;
+    width: 80%;
+}
+
+.registroButton:hover {width: 100%;}

@@ -80,8 +80,8 @@
                 <span class="title">Perfil</span>
             </label>
             <label for="batallas" class="batallas">
-                <span class="icon" onclick="window.location.href='index.php'"><ion-icon name="shield-half-outline"></ion-icon></span>
-                <span class="title" onclick="window.location.href='index.php'">Batallas</span>
+                <span class="icon"><ion-icon name="shield-half-outline"></ion-icon></span>
+                <span class="title">Batallas</span>
             </label>
             <label for="stats" class="stats">
                 <span class="icon"><ion-icon name="podium-outline"></ion-icon></span>

@@ -75,7 +75,7 @@
                 <ion-icon name="arrow-forward-outline" class="open"></ion-icon>
                 <ion-icon name="arrow-back-outline" class="close"></ion-icon>
             </div>
-            <label for="perfil" class="perfil">
+            <label for="perfil" class="perfil active">
                 <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                 <span class="title">Perfil</span>
             </label>
@@ -87,7 +87,7 @@
                 <span class="icon"><ion-icon name="podium-outline"></ion-icon></span>
                 <span class="title">Estadisticas</span>
             </label>
-            <label for="logros" class="logros active">
+            <label for="logros" class="logros">
                 <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></span>
                 <span class="title">Logros</span>
             </label>

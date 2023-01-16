@@ -12,7 +12,6 @@
 <body>
     <?php
 
-    //KLK
     require_once('./php/funciones.php');
     require_once('./php/config.php');
     require_once('./php/config.php');

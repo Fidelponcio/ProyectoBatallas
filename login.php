@@ -11,10 +11,10 @@
         require ('./php/visual.php');
         //Si el usuario tiene la cookie de sesión se le redirigira a su perfil
         session_start();
-        if (isset($_SESSION["usuario"])) {
-            header("Location: perfil.php");
-            exit();
-    }
+            if (isset($_SESSION["usuario"])) {
+                header("Location: perfil.php");
+                exit();
+        }
     ?>
     <title><?php echo $lang['loginTitle'] ?></title>
 </head>

@@ -8,23 +8,35 @@
 </head>
 <body>
     <form action="" method="post" class="containerForm pre" enctype="multipart/form-data">
-        <label for="usuario">Nombre de usuario</label>
-        <input type="text" name="usuario" value="">
+        <div>
+            <label for="usuario">Nombre de usuario</label>
+            <input type="text" name="usuario" value="">
+        </div>
 
-        <label for="password">Contraseña</label>
-        <input type="password" name="password" value="">
+        <div>
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" value="">
+        </div>
 
-        <label for="password2">Repita su contraseña</label>
-        <input type="password" name="password2" value="">
+        <div>
+            <label for="password2">Repita su contraseña</label>
+            <input type="password" name="password2" value="">
+        </div>
         
-        <label for="email">E-mail</label>
-        <input type="email" name="email" value="">
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" value="">
+        </div>
         
-        <label for="fecha">Fecha de nacimiento</label>
-        <input type="date" name="fecha" value=" ">
+        <div>
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" name="fecha" value="">
+        </div>
         
-        <label for="avatar">Foto de perfil</label>
-        <input type="file" name="avatar" accept="image/png, image/jpeg, image/jpg" value="<?php echo $_avatar; ?>">
+        <div>
+            <label for="avatar">Foto de perfil</label>
+            <input type="file" name="avatar" accept="image/png, image/jpeg, image/jpg" value="">
+        </div>
         
         <input type="button" value="VOLVER" class="registroButton btn" onclick="window.location.href='index.php'">
         

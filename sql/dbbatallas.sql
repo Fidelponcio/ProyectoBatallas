@@ -163,16 +163,6 @@ CREATE TABLE IF NOT EXISTS `voto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Estructura de tabla para la tabla `sesiones`
-    CREATE TABLE `sesiones` (
-      `nombreusuario` varchar(50) NOT NULL,
-      `fechaHoraInicio` datetime NOT NULL,
-      `fechaHoraFinal` datetime NOT NULL
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='TRIAL';
-
---
-
---
 -- Restricciones para tablas volcadas
 --
 

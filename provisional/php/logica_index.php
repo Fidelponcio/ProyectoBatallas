@@ -33,8 +33,7 @@
         } else if (loguear($_usuario, $_password)) {
             // Si la contraseña y usuario se encuentran en la BBDD y coinciden,
             // se redigire a perfil.php con los datos del usuario de la BBDD
-            echo 'logueo2';
-            header("Location: perfil.php");
+            header("Location: inicio.php");
             exit();
             // Además, se cargarán las cookies necesarias (tema, idioma)
 
